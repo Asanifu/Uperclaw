@@ -1,0 +1,58 @@
+﻿<Page
+  x:Class="Uperclaw.Views.Pages.SettingsPage"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:helpers="clr-namespace:Uperclaw.Helpers"
+  xmlns:local="clr-namespace:Uperclaw.Views.Pages"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+  Title="SettingsPage"
+  d:DataContext="{d:DesignInstance local:SettingsPage,
+                                     IsDesignTimeCreatable=False}"
+  d:DesignHeight="450"
+  d:DesignWidth="800"
+    Loaded="Page_Loaded"
+  mc:Ignorable="d"
+>
+  <Page.Resources>
+    <helpers:EnumToBooleanConverter x:Key="EnumToBooleanConverter" />
+  </Page.Resources>
+  <StackPanel>
+        <TextBlock Margin="0,12,0,0" FontSize="20" FontWeight="Medium" Text="语言与地区 | Language &#38; Region" />
+        <TextBlock Margin="0,12,0,0" Text="语言 | Language" />
+        <ComboBox SelectionChanged="LanguageBox_SelectionChanged"  x:Name="LanguageBox" Margin="0,12,0,0" Width="Auto" SelectedIndex="0">
+            <ComboBoxItem>
+                简体中文
+            </ComboBoxItem>
+            <ComboBoxItem>
+                English
+            </ComboBoxItem>
+        </ComboBox>
+        <TextBlock Margin="0,12,0,0" Text="地区 | Region" />
+        <ComboBox IsEnabled="False" Margin="0,12,0,0" SelectionChanged="RegionBox_SelectionChanged" x:Name="RegionBox">
+            
+        </ComboBox>
+        <TextBlock FontSize="20" FontWeight="Medium" Text="{DynamicResource ResourceKey=Personalize}" />
+    <TextBlock Margin="0,12,0,0" Text="{DynamicResource ResourceKey=Theme}" />
+    <RadioButton
+      Margin="0,12,0,0"
+      Command="{Binding ViewModel.ChangeThemeCommand, Mode=OneWay}"
+      CommandParameter="theme_light"
+      Content="{DynamicResource ResourceKey=Theme_Light}"
+      GroupName="themeSelect"
+      IsChecked="{Binding ViewModel.CurrentTheme, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Light, Mode=OneWay}"
+    />
+        <RadioButton
+      Margin="0,8,0,0"
+      Command="{Binding ViewModel.ChangeThemeCommand, Mode=OneWay}"
+      CommandParameter="theme_dark"
+      Content="{DynamicResource ResourceKey=Theme_Dark}"
+      GroupName="themeSelect"
+      IsChecked="{Binding ViewModel.CurrentTheme, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Dark, Mode=OneWay}"
+    />
+        <CheckBox IsChecked="True" IsHitTestVisible="False" IsTabStop="False">
+            <TextBlock Text="{DynamicResource ResourceKey=OpenWebuiAfterLaunch}"/>
+        </CheckBox>
+    </StackPanel>
+</Page>

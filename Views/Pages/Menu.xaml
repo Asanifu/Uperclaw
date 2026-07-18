@@ -1,0 +1,143 @@
+﻿<Page
+  x:Class="Uperclaw.Views.Pages.DashboardPage"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:local="clr-namespace:Uperclaw.Views.Pages"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+  d:DesignHeight="450"
+    Loaded="Page_Loaded"
+  d:DesignWidth="800"
+  mc:Ignorable="d"
+>
+    <Grid x:Name="Mothgrid" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="4*" x:Name="widpen"/>
+        </Grid.ColumnDefinitions>
+        <ui:Card Margin="2,2,2,2" Grid.Column="0">
+            <Grid Height="{Binding ElementName=Mothgrid,Path=ActualHeight}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel>
+                        <Image Visibility="Visible" Source="/Assets/UpanClaw.png" Margin="15" RenderOptions.BitmapScalingMode="HighQuality" Loaded="Image_Loaded" x:Name="Icontion" Height="100" Width="100"/>
+                        <TextBlock Text="UpanClaw" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1">
+                        <ui:Card Margin="2">
+                            <Grid Margin="-10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0">
+                                    <Border MinHeight="40" Width="3" CornerRadius="1.5" Background="Blue"/>
+                                </Grid>
+                                <Grid Grid.Column="1" Margin="5,0,0,0">
+                                    <StackPanel>
+                                        <TextBlock TextWrapping="WrapWithOverflow" Text="{DynamicResource ResourceKey=SimpleDesign}" FontWeight="Bold"/>
+                                        <TextBlock  Text="{DynamicResource ResourceKey=EasyToUse_TouchSmart}" FontFamily="SimHei"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                        </ui:Card>
+                        <ui:Card Margin="2">
+                            <Grid Margin="-10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0">
+                                    <Border MinHeight="40" Width="3" CornerRadius="1.5" Background="SpringGreen"/>
+                                </Grid>
+                                <Grid Grid.Column="1" Margin="5,0,0,0">
+                                    <StackPanel>
+                                        <TextBlock TextWrapping="WrapWithOverflow" Text="{DynamicResource ResourceKey=UpanVersion}" FontWeight="Bold"/>
+                                        <TextBlock TextWrapping="WrapWithOverflow" Text="{DynamicResource ResourceKey=HeatInstallBeEasyAndFaster}" FontFamily="SimHei"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                        </ui:Card>
+                        <ui:Card Margin="2">
+                            <Grid Margin="-10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0">
+                                    <Border MinHeight="40" Width="3" CornerRadius="1.5" Background="Red"/>
+                                </Grid>
+                                <Grid Grid.Column="1" Margin="5,0,0,0">
+                                    <StackPanel>
+                                        <TextBlock TextWrapping="WrapWithOverflow" Text="{DynamicResource ResourceKey=ComppleteUpgrade}" FontWeight="Bold"/>
+                                        <TextBlock TextWrapping="WrapWithOverflow" Text="{DynamicResource ResourceKey=SafeEasyandGoodPerformce}" FontFamily="SimHei"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                        </ui:Card>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </ui:Card>
+        <ui:Card Margin="2,2,2,2" Grid.Column="1">
+            <Grid Height="{Binding ElementName=Mothgrid,Path=ActualHeight}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="{DynamicResource ResourceKey=Dashboard}" HorizontalAlignment="Right" FontSize="24" FontWeight="Bold"/>
+                <StackPanel Grid.Row="1" Margin="5">
+                    <ui:Card>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <ui:SymbolIcon Symbol="CalendarAgenda24" Height="40" Width="40" FontSize="35"/>
+                            <StackPanel Grid.Column="1">
+                                <TextBlock Text="CPU" FontSize="18" FontWeight="Bold"/>
+                                <TextBlock Text="i7 8086" x:Name="CPUModel"/>
+                            </StackPanel>
+                        </Grid>
+                    </ui:Card>
+                    <ui:Card>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <ui:SymbolIcon Symbol="Memory16" Height="40" Width="40" FontSize="35"/>
+                            <StackPanel Grid.Column="1">
+                                <TextBlock Text="RAM" FontSize="18" FontWeight="Bold"/>
+                                <TextBlock Text="8GB" x:Name="RAMSize"/>
+                            </StackPanel>
+                        </Grid>
+                    </ui:Card>
+                    <ui:Card>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <ui:SymbolIcon Symbol="Memory16" Height="40" Width="40" FontSize="35"/>
+                            <StackPanel Grid.Column="1">
+                                <TextBlock Text="{DynamicResource ResourceKey=UseableSpace}" FontSize="18" FontWeight="Bold"/>
+                                <TextBlock Text="8GB" x:Name="CanUseStorge"/>
+                            </StackPanel>
+                        </Grid>
+                    </ui:Card>
+                    <Button x:Name="StartShabi" Click="StartShabi_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="100" Width="200" Margin="5">
+                        <TextBlock FontSize="48" Text="{DynamicResource ResourceKey=Start}" />
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </ui:Card>
+    </Grid>
+</Page>

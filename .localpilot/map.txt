@@ -1,0 +1,71 @@
+## WORKSPACE EXECUTIVE SUMMARY (YAML)
+# Generated: 2026-07-17T21:54:34.6831596+08:00
+# Root: C:\Users\Administrator\source\repos\Uperclaw
+Architecture:
+  Type: Backend (C#/.NET)
+  Scale: 22 relevant source files
+  Components: 0
+  Controllers: 0
+  Models: 2
+  Services: 1
+---
+- File: Uperclaw.csproj
+  Preview: "<Project Sdk='Microsoft.NET.Sdk'>  <PropertyGroup>   <OutputType>WinExe</OutputType>   <TargetFramework>net10.0-windows</TargetFramework>   <Applicati..."
+- File: App.xaml.cs
+  Preview: "using Microsoft.Extensions.Configuration; using Microsoft.Extensions.DependencyInjection; using Microsoft.Extensions.Hosting; using System.IO; using S..."
+- File: AssemblyInfo.cs
+  Preview: "using System.Windows; [assembly: ThemeInfo(   ResourceDictionaryLocation.None, //where theme specific resource dictionaries are located               ..."
+- File: Sysinfo.cs
+  Symbols: [SystemUtil]
+  Preview: "using System.Diagnostics; using System.Management; using System.Runtime.InteropServices; public class SystemUtil {   #region 内存   #region 获得内存信息API   ..."
+- File: Uperclaw.slnx
+  Preview: "<Solution>  <Project Path='Uperclaw.csproj' /> </Solution> "
+- File: Usings.cs
+  Preview: "global using CommunityToolkit.Mvvm.ComponentModel; global using CommunityToolkit.Mvvm.Input; global using System; global using System.Windows; "
+- File: Helpers\EnumToBooleanConverter.cs
+  Symbols: [EnumToBooleanConverter]
+  Preview: "using System.Globalization; using System.Windows.Data; using Wpf.Ui.Appearance; namespace Uperclaw.Helpers {   internal class EnumToBooleanConverter :..."
+- File: Models\AppConfig.cs
+  Symbols: [AppConfig]
+  Preview: "namespace Uperclaw.Models {   public class AppConfig   {     public string ConfigurationsFolder { get; set; }     public string AppPropertiesFileName ..."
+- File: Models\DataColor.cs
+  Symbols: [DataColor]
+  Preview: "using System.Windows.Media; namespace Uperclaw.Models {   public struct DataColor   {     public Brush Color { get; set; }   } } "
+- File: Resources\Translations.cs
+  Symbols: [Translations]
+  Preview: "namespace Uperclaw.Resources {   public partial class Translations   {   } } "
+- File: Services\ApplicationHostService.cs
+  Preview: "using Microsoft.Extensions.DependencyInjection; using Microsoft.Extensions.Hosting; using Uperclaw.Views.Pages; using Uperclaw.Views.Windows; using Wp..."
+- File: ViewModels\Pages\DataViewModel.cs
+  Symbols: [DataViewModel]
+  Preview: "using System.Windows.Media; using Uperclaw.Models; using Wpf.Ui.Abstractions.Controls; namespace Uperclaw.ViewModels.Pages {   public partial class Da..."
+- File: ViewModels\Pages\SettingsViewModel.cs
+  Symbols: [SettingsViewModel]
+  Preview: "using Wpf.Ui.Abstractions.Controls; using Wpf.Ui.Appearance; namespace Uperclaw.ViewModels.Pages {   public partial class SettingsViewModel : Observab..."
+- File: ViewModels\Pages\STDViewModel.cs
+  Symbols: [STDViewModel]
+  Preview: "namespace Uperclaw.ViewModels.Pages {   public partial class STDViewModel : ObservableObject   {   } } "
+- File: ViewModels\Windows\Brown.xaml.cs
+  Symbols: [catch, catch, GetDashboardUrlFromCli, Brown, Brown, Window_Loaded, RefreshButton_Click]
+  Preview: "using System; using System.Windows; using System.Windows.Controls; using Microsoft.Web.WebView2.Wpf; using Microsoft.Web.WebView2.Core; using System.D..."
+- File: ViewModels\Windows\MainWindowViewModel.cs
+  Symbols: [MainWindowViewModel, MainWindowViewModel, new, new, new, NavigationViewItem, NavigationViewItem, NavigationViewItem, NavigationViewItem, NavigationViewItem]
+  Preview: "using System.Collections.ObjectModel; using Wpf.Ui.Controls; namespace Uperclaw.ViewModels.Windows {   public partial class MainWindowViewModel : Obse..."
+- File: Views\Pages\Console.xaml.cs
+  Symbols: [catch, StartButton_Click, Console, Console, IsPortOpen, StopButton_Click]
+  Preview: "using System; using System.Collections.Generic; using System.Diagnostics; using System.IO; using System.Net.Sockets; using System.Text; using System.T..."
+- File: Views\Pages\Control.xaml.cs
+  Symbols: [DataPage, DataPage, Hyperlink_RequestNavigate, ProcessStartInfo]
+  Preview: "using System.Diagnostics; using System.Windows.Documents; using System.Windows.Navigation; using Uperclaw.ViewModels.Pages; using Wpf.Ui.Abstractions...."
+- File: Views\Pages\Learn.xaml.cs
+  Symbols: [Learn, Learn]
+  Preview: "using System; using System.Collections.Generic; using System.Text; using System.Windows; using System.Windows.Controls; using System.Windows.Data; usi..."
+- File: Views\Pages\Menu.xaml.cs
+  Symbols: [DashboardPage]
+  Preview: "using System.Diagnostics.SymbolStore; using System.IO; using System.Management; using Uperclaw.ViewModels.Pages; using Wpf.Ui.Abstractions.Controls; n..."
+- File: Views\Pages\SettingsPage.xaml.cs
+  Symbols: [SettingsPage]
+  Preview: "using System.Globalization; using System.Windows.Controls; using Uperclaw.ViewModels.Pages; using Wpf.Ui.Abstractions.Controls; namespace Uperclaw.Vie..."
+- File: Views\Windows\MainWindow.xaml.cs
+  Symbols: [MainWindow]
+  Preview: "using System.Net; using Uperclaw.ViewModels.Windows; using Wpf.Ui; using Wpf.Ui.Abstractions; using Wpf.Ui.Appearance; using Wpf.Ui.Controls; namespac..."
